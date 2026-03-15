@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Session - CoachConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">CoachConnect</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coaches.html">Find Coaches</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Book Your Session</h2>
+        
+        <div class="booking-container">
+            <div class="booking-details" id="bookingDetails">
+                <!-- Will be filled by JavaScript -->
+            </div>
+
+            <form id="bookingForm" class="booking-form">
+                <h3>Your Information</h3>
+                
+                <div class="form-group">
+                    <label for="clientName">Full Name</label>
+                    <input type="text" id="clientName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="clientEmail">Email</label>
+                    <input type="email" id="clientEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookingDate">Preferred Date</label>
+                    <input type="date" id="bookingDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookingTime">Preferred Time</label>
+                    <input type="time" id="bookingTime" required>
+                </div>
+
+                <!-- Stripe Elements -->
+                <div class="form-group">
+                    <label>Payment Details</label>
+                    <div id="card-element" class="stripe-card"></div>
+                    <div id="card-errors" class="error-message"></div>
+                </div>
+
+                <button type="submit" id="submitButton" class="btn btn-primary btn-block">
+                    Pay & Book Session
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CoachConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/booking.js"></script>
+</body>
+</html>
