@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Coaches - CoachConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">CoachConnect</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coaches.html">Find Coaches</a></li>
+                <li><a href="index.html#lead-magnet">Free Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Our Coaches</h2>
+        
+        <!-- Search and Filter -->
+        <div class="filters">
+            <input type="text" id="search" placeholder="Search coaches..." class="search-input">
+            <select id="specialty" class="filter-select">
+                <option value="">All Specialties</option>
+                <option value="Life Coach">Life Coach</option>
+                <option value="Business Coach">Business Coach</option>
+                <option value="Career Coach">Career Coach</option>
+                <option value="Health Coach">Health Coach</option>
+            </select>
+        </div>
+
+        <!-- Coaches Grid -->
+        <div id="coachesGrid" class="coaches-grid">
+            <div class="loading">Loading coaches...</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CoachConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/coaches.js"></script>
+</body>
+</html>
