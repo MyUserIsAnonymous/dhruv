@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv's Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">CoachConnect</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coaches.html">Find Coaches</a></li>
+                <li><a href="#lead-magnet">Free Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h2>Transform Your Life with Expert Coaches</h2>
+            <p>Book 1-on-1 sessions with top-rated professionals</p>
+            <a href="coaches.html" class="btn btn-primary">Browse Coaches</a>
+        </div>
+    </header>
+
+    <!-- Lead Magnet Section -->
+    <section id="lead-magnet" class="lead-magnet">
+        <div class="container">
+            <div class="lead-box">
+                <h3>Free Guide: 10 Steps to Choose the Right Coach</h3>
+                <p>Get our exclusive guide and weekly coaching tips</p>
+                <form id="leadForm" class="lead-form">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <button type="submit" class="btn btn-secondary">Get Free Guide</button>
+                </form>
+                <div id="leadMessage" class="message"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CoachConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
