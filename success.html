@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Successful - CoachConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">CoachConnect</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coaches.html">Find Coaches</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="success-container">
+            <div class="success-icon">✓</div>
+            <h2>Booking Successful!</h2>
+            <p>Your session has been booked. Check your email for confirmation details.</p>
+            <div class="success-details" id="bookingSummary"></div>
+            <a href="coaches.html" class="btn btn-primary">Browse More Coaches</a>
+        </div>
+    </main>
+
+    <script>
+        // Display booking details from URL parameters
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('bookingSummary').innerHTML = `
+            <p><strong>Service:</strong> ${params.get('service') || 'Coaching Session'}</p>
+            <p><strong>Date:</strong> ${params.get('date') || 'TBD'}</p>
+            <p><strong>Time:</strong> ${params.get('time') || 'TBD'}</p>
+        `;
+    </script>
+</body>
+</html>
